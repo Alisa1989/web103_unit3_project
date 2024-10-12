@@ -12,7 +12,7 @@ const getEvents = async (req, res) => {
 const getEventById = async (req, res) => {
   try {
     const selectQuery =`
-      SELECT name, image, date, location
+      SELECT title, image, date, location
       FROM events
       WHERE id=$1`;
       const eventId = req.params.eventId
